@@ -39,9 +39,80 @@
 
   animation-name: swapColor;
   animation-duration: 5s;
-  animation-iteration-count: 3;
+  animation-iteration-count: infinite;
+  /* animation-fill-mode: forwards; */
+  animation-direction: alternate;
 }
 
+.animateColor:hover{
+  animation-play-state:paused
+
+}
+
+
 @keyframes swapColor {
-  
+
+0% {background-color: red;}
+25% {background-color: green;}
+50% {background-color: blue}
+75% {background-color: purple;}
+100%{background-color: red}
+}
+
+.animateSize {
+  height: 200px;
+  width: 200px;
+background-color: yellowgreen;
+
+  animation-name: sizeSwap ;
+  animation-duration:5s;
+  animation-iteration-count:infinite;
+  animation-direction:alternate;
+}
+
+@keyframes sizeSwap {
+  0% {
+    height:200px;
+    width:200px;
+  }
+  50% {
+    height: 250px;
+    width:300px;
+  }
+  100% {
+    height: 300px;
+    width:350px;
+  }
+}
+.card{
+  height: 300px;
+  width: 300px;
+
+  position:relative;
+  transition: transform;
+  transform-style: preserve-3d
+
+}
+
+.card:hover {
+  transform: rotateY (180);}
+
+
+.front. .back {
+  width: 100%;
+  width: 100%;
+  display:flex;
+  align-items:center;
+  font-size:24px;
+  border: 1px solid white;
+  border-radius: 10px;
+
+  position: absolute;
+  backface-visibility: hidden;
+}
+.back{
+  transition: transform;
+}
+.back:hover {
+  transform: rotateY (180);
 }
