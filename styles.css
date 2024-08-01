@@ -1,0 +1,47 @@
+.changeColor {
+  height: 200px;
+  width: 200px;
+
+  background-color: red;
+  transition-property: background-color;
+  transition-duration: 1.0s;
+  transition-delay: 0.3s;
+
+  transition: background-color 1s;
+}
+
+.changeColor:hover {
+  background-color: green;
+}
+
+.makeBigger {
+  height: 200px;
+  width: 200px;
+
+  background-color: aqua;
+  /* transition-property: height, width; */
+  transition-property: transform;
+  transition-duration: 3s;
+  transition: transform 3s;
+}
+
+
+.makeBigger:hover {
+   /* height: 300px; */
+   /* width: 300px; */
+  transform: scale(1.5);
+}
+
+
+.animateColor {
+  height: 200px;
+  width: 200px;
+
+  animation-name: swapColor;
+  animation-duration: 5s;
+  animation-iteration-count: 3;
+}
+
+@keyframes swapColor {
+  
+}
